@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevLab — HTML e CSS na prática</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1020; --panel:#141d33; --text:#f4f7ff; --muted:#b8c4dd; --accent:#6ce5d2; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--bg); color:var(--text); font:1rem/1.6 system-ui,sans-serif; }
+    .container { width:min(1100px,92%); margin-inline:auto; }
+    .topo { padding-block:1.25rem; border-bottom:1px solid #33415e; }
+    .navegacao { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; }
+    .marca { font-size:1.3rem; font-weight:800; color:var(--accent); text-decoration:none; }
+    nav { display:flex; gap:1.25rem; }
+    a { color:var(--accent); text-underline-offset:4px; }
+    :focus-visible { outline:3px solid #ffcc80; outline-offset:4px; }
+    .hero { padding-block:4rem 2rem; max-width:780px; }
+    .etiqueta { text-transform:uppercase; letter-spacing:.15em; color:var(--accent); font-size:.8rem; font-weight:700; }
+    h1 { font-size:clamp(2.2rem,6vw,4.5rem); line-height:1.08; margin:1rem 0; letter-spacing:-.04em; }
+    h2 { font-size:1.5rem; line-height:1.25; }
+    p { color:var(--muted); }
+    .cursos { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1rem; }
+    .card { padding:1.5rem; border:1px solid #33415e; border-radius:18px; background:var(--panel); }
+    .numero { font:700 1.1rem monospace; color:var(--accent); }
+    #inscricao { margin-block:3rem; }
+    form { display:grid; gap:1rem; max-width:600px; }
+    label { display:block; font-weight:650; margin-bottom:.35rem; }
+    input,select,button { font:inherit; }
+    input,select { width:100%; min-height:48px; border:1px solid #61708f; border-radius:8px; padding:.7rem; background:var(--bg); color:var(--text); }
+    button { padding:.85rem 1.5rem; border:0; border-radius:8px; font-weight:750; background:var(--accent); color:var(--bg); cursor:pointer; }
+    button:hover { background:#a4f5e8; }
+    .aviso { font-size:.9rem; }
+    footer { padding-block:1.5rem; border-top:1px solid #33415e; color:var(--muted); }
+    @media (max-width:700px) {
+      .cursos { grid-template-columns:1fr; }
+      .hero { padding-top:2.5rem; }
+      nav { gap:.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <div class="container navegacao">
+      <a class="marca" href="#inicio" aria-label="DevLab, início">&lt;/&gt; DevLab</a>
+      <nav aria-label="Navegação principal"><a href="#cursos">Cursos</a><a href="#inscricao">Inscrição</a></nav>
+    </div>
+  </header>
+  <main class="container" id="inicio">
+    <section class="hero" aria-labelledby="titulo">
+      <span class="etiqueta">HTML + CSS • Projeto demonstrativo</span>
+      <h1 id="titulo">Sua próxima ideia começa na web.</h1>
+      <p>Uma página sem frameworks: estrutura semântica, cards responsivos e formulário com validação nativa.</p>
+      <a href="#inscricao">Explore o formulário ↓</a>
+    </section>
+    <section id="cursos" aria-labelledby="titulo-cursos">
+      <h2 id="titulo-cursos">Três fundamentos. Uma interface.</h2>
+      <div class="cursos">
+        <article class="card"><span class="numero">01 / HTML</span><h2>Estrutura</h2><p>Tags semânticas organizam o conteúdo e comunicam sua função.</p></article>
+        <article class="card"><span class="numero">02 / CSS</span><h2>Estilo</h2><p>Cores, tipografia e espaçamento constroem a identidade visual.</p></article>
+        <article class="card"><span class="numero">03 / Layout</span><h2>Responsividade</h2><p>Grid e media queries ajustam os cards à largura da tela.</p></article>
+      </div>
+    </section>
+    <section id="inscricao" class="card" aria-labelledby="titulo-form">
+      <h2 id="titulo-form">Experimente a validação do navegador</h2>
+      <p id="aviso" class="aviso">Demonstração local: use dados fictícios. O envio recarrega a página com os campos na URL; não há servidor para salvar ou cadastrar.</p>
+      <form action="#inscricao" method="get" aria-describedby="aviso">
+        <div><label for="nome">Nome fictício</label><input id="nome" name="nome" autocomplete="off" required minlength="2" placeholder="Ex.: Ana Exemplo"></div>
+        <div><label for="email">E-mail fictício</label><input id="email" name="email" type="email" autocomplete="off" required placeholder="ana@example.com"></div>
+        <div><label for="curso">Tema de interesse</label><select id="curso" name="curso"><option>HTML e CSS</option><option>Layout responsivo</option><option>Acessibilidade</option></select></div>
+        <button type="submit">Testar formulário</button>
+      </form>
+    </section>
+  </main>
+  <footer><div class="container">Tema 03 • Desenvolvimento Web — feito com HTML e CSS.</div></footer>
+</body>
+</html>
