@@ -1,15 +1,19 @@
 # Desenvolvimento Web — HTML e CSS
 
-Apresentação com 18 slides para o tema 03 do curso técnico em Desenvolvimento de Sistemas.
+Apresentação com 14 slides para o tema 03 do curso técnico em Desenvolvimento de Sistemas.
+
+**Autores:** Isaque, Jean e João Vitor.
+
+Versão voltada à apresentação em sala, com explicações objetivas, códigos e exemplos visuais.
 
 - [Apresentação em PDF](Slides-HTML-e-CSS.pdf)
 - [Apresentação editável em PowerPoint](Slides-HTML-e-CSS.pptx)
-- [Roteiro e sugestão de divisão do grupo](roteiro-apresentacao.md)
+- [Sequência dos slides](roteiro-apresentacao.md)
 - [Página de exemplo](exemplo.html)
 
 ## Conteúdo
 
-Estrutura HTML, tags semânticas, formulários, CSS, seletores, classes, IDs, cascata, box model, Flexbox, Grid, responsividade e acessibilidade.
+Estrutura HTML, tags semânticas, formulários, CSS, seletores, classes, IDs, box model, Flexbox, Grid, responsividade e acessibilidade.
 
 ## Usar os arquivos
 
